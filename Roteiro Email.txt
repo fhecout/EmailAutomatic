@@ -1,0 +1,25 @@
+Roteiro Email:
+
+EMAIL DAR CERTO
+
+fazer verificação de duas etapas na conta do google na conta
+https://accounts.google.com/signin/v2/challenge/pwd?TL=AJvNCbasR26n6fFux6sWvE6p0gzBeSU5kZ5y_uv4aDUT06LSpSRTOPCDuNaEUHQn&cid=1&continue=https%3A%2F%2Fmyaccount.google.com%2Fu%2F1%2Fsigninoptions%2Ftwo-step-verification&flowName=GlifWebSignIn&ifkv=AeDOFXjubF-0jlAKu93SKLGTznMKzo6EHOmbzIksipVSigZn0Wog0zqV4wB-kvE2Q8jvlN15r_IX&rart=ANgoxcckmCJJc5qfXZidmyknv0HbdQLf9YgR6nfLsYZ0JZsSlDqcUxO8m1QVIaTXTd7Mwf4NLPjcvUnwtNSmLgtDlMXADsF-dg&sarp=1&scc=1&service=accountsettings&flowEntry=ServiceLogin
+
+
+pesquisar senha de app no google
+
+https://myaccount.google.com/u/1/apppasswords?pli=1&rapt=AEjHL4N0Kc1DfSJNHBYCaGPLPFoBu8WPJaPj4CKXodCIYZyO8mv9pcr8x0jybMhn1uwlMtsG_sD79TMNdne8eKgtpXbVho7ruw
+
+
+criar uma senha especial para um app.
+colocar o email e senha nas linhas de codigo do programa.
+
+
+Colocar as DLLs na pasta System32 e na pasta sysWOW64
+
+
+Rodar o programa.
+
+
+
+(Fonts estao logo acima para fazer alteração de email, senha e local que voce deseja mandar).

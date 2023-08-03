@@ -1,0 +1,78 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, IdSMTP, IdMessage, IdBaseComponent, IdComponent, IdTCPConnection,
+  IdTCPClient, IdExplicitTLSClientServerBase, IdMessageClient, IdSMTPBase,
+  Vcl.StdCtrls, IdSSLOpenSSL;
+
+type
+  TForm1 = class(TForm)
+    IdSMTP1: TIdSMTP;
+    Edit1: TEdit;
+    Destinatario: TLabel;
+    Label1: TLabel;
+    Assunto: TEdit;
+    CorpoMensagem: TLabel;
+    EnviarEmail: TButton;
+    Texto: TMemo;
+    procedure EnviarEmailClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    Mail: TIdMessage;
+    CaminhoAnexo: string;
+  end;
+
+var
+  Form1: TForm1;
+  SMTP: TIdSMTP;
+  SSLHandler: TIdSSLIOHandlerSocketOpenSSL;
+  CaminhoAnexo: string;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.EnviarEmailClick(Sender: TObject);
+begin
+  SMTP := TIdSMTP.Create(nil);
+  SSLHandler := TIdSSLIOHandlerSocketOpenSSL.Create(nil);
+  Mail := TIdMessage.Create(nil);
+  try
+    SSLHandler.SSLOptions.Method := sslvSSLv23;
+    SSLHandler.SSLOptions.Mode := sslmUnassigned;
+    SSLHandler.SSLOptions.VerifyMode := [];
+    SSLHandler.SSLOptions.VerifyDepth := 0;
+
+    SMTP.IOHandler := SSLHandler;
+    SMTP.Port := 587;
+    SMTP.Host := 'smtp.gmail.com';
+    SMTP.Username := 'felipe@artean.com.br';
+    SMTP.Password := 'vipjylatzclaezcl';
+    SMTP.UseTLS := utUseExplicitTLS;
+    SMTP.Connect;
+
+       mail.From.Address := 'felipe@artean.com.br';
+        mail.Recipients.EmailAddresses := 'feliperafaeldocouto0306@gmail.com'; // para a pessoa que deseja mandar
+        mail.Subject := 'Test subject';
+        mail.Body.Text := 'Test body';
+
+
+
+    if SMTP.Connected then
+    begin
+      SMTP.Send(Mail);
+      SMTP.Disconnect;
+    end;
+  finally
+    Mail.Free;
+    SSLHandler.Free;
+    SMTP.Free;
+    showmessage('Mensagem Enviada com Sucesso');
+  end;
+end;
+
+end.

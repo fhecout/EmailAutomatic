@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Destinatario: TLabel
+    Left = 48
+    Top = 27
+    Width = 63
+    Height = 15
+    Caption = 'Destinatario'
+  end
+  object Label1: TLabel
+    Left = 48
+    Top = 96
+    Width = 43
+    Height = 15
+    Caption = 'Assunto'
+  end
+  object CorpoMensagem: TLabel
+    Left = 48
+    Top = 163
+    Width = 95
+    Height = 15
+    Caption = 'Corpo Mensagem'
+  end
+  object Edit1: TEdit
+    Left = 48
+    Top = 48
+    Width = 505
+    Height = 23
+    TabOrder = 0
+    Text = 'Destinatario'
+  end
+  object Assunto: TEdit
+    Left = 48
+    Top = 117
+    Width = 505
+    Height = 23
+    TabOrder = 1
+    Text = 'Assunto'
+  end
+  object EnviarEmail: TButton
+    Left = 256
+    Top = 384
+    Width = 75
+    Height = 25
+    Caption = 'Enviar'
+    TabOrder = 2
+    OnClick = EnviarEmailClick
+  end
+  object Texto: TMemo
+    Left = 48
+    Top = 184
+    Width = 505
+    Height = 194
+    Lines.Strings = (
+      'Texto')
+    TabOrder = 3
+  end
+  object IdSMTP1: TIdSMTP
+    SASLMechanisms = <>
+    Left = 584
+    Top = 16
+  end
+end
